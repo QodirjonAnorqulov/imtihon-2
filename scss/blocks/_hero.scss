@@ -1,0 +1,115 @@
+.hero{
+    padding: 30px 0;
+    height: 450px;
+    background-image: url(../../images/Bitmap.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    h2{
+        font-size: 52px;
+        width:40%;
+        margin-left: 12%;
+        color: aliceblue;
+    }
+    &__blok{
+        display: flex;
+        p{
+            width: 30%;
+            margin-left: 16%;
+            font-size: 15px;
+            color: aliceblue;
+            margin-top: -40px;
+        }
+        &__img1{
+            position: absolute;
+            top: 275px;
+            // top: 59px;
+            // bottom: 1px;
+            
+        }
+        &__img2{
+            position: absolute;
+            // top:41px;
+            left: 48%;
+            top: 275px;
+        }
+        &__img3{
+            display: none;
+        }
+    }
+    &__btn{
+        width: 183px;
+        height: 50px;
+        background: rgb(254, 183, 42);
+        color: aliceblue;
+        border-color: rgb(254, 183, 42) ;
+        margin-left: 16%;
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width:1218px){
+    .hero{
+        padding: 20px 0;
+        // padding: 10px;
+        height: 650px;
+        background-size: 100% 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        h2{
+            width: 55%;
+            margin-left: 22%;
+            margin-top: 19%;
+            font-size: 56px;
+            text-align: center;
+            // justify-content: center;
+            // align-items: center;
+        }
+        p{
+            align-items: center;
+            width: 69%;
+        }
+        &__btn{
+            margin-left: -10px;
+        }
+        &__blok{
+            &__img1{
+                display: none;
+            }
+            &__img2{
+                // margin-top: 60px;
+                top: 520px;
+                left: 0;
+                
+            }
+        }
+       
+       }
+    }
+    @media screen and (max-width:555px){
+        .hero{
+            background-image: url(../../images/orqa_fon.png);
+            // padding: 10px;
+            // width: 100%;
+            // background-size: 100% 100% 100%;
+            background-repeat: no-repeat;
+            h2{
+                font-size: 40px;
+                width: 70%;
+                margin-left: 60px;
+                text-align: center;
+            }
+            &__blok{
+                &__img2{
+                    display: none;
+                }
+                &__img3{
+                    position: absolute;
+                    display: flex;
+                    margin-top: 45%;
+                    left: 0;
+                }
+            }
+        }
+    }
+

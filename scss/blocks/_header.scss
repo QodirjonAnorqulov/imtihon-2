@@ -1,0 +1,106 @@
+.header{
+    top: 0;
+    // position: fixed;
+    z-index: 1;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    .toogle{
+        display: none;
+    }
+    &__list{
+        display: flex;
+        margin-left: -25%;
+       
+        &__item{
+            list-style: none;
+            margin: 30px;
+            a{
+                text-decoration: none;
+                color: rgba(147, 156, 170, 1);
+            }
+        }
+    }
+    &__btn{
+        width: 183px;
+        height: 50px;
+        background: rgb(254, 183, 42);
+        color: aliceblue;
+        border-color: rgb(254, 183, 42) ;
+
+    }
+}
+@media screen and (max-width: 888px){
+    .header{
+        width: 100%;
+        justify-content: space-around;
+        &__list{
+            margin-left: -2%;
+            // margin-right: auto;
+            // margin-left: auto;
+            &__item{
+                margin: 15px;
+            }
+        }
+    
+    }
+}
+@media screen and (max-width:555px){
+    .header{
+        // background-color: rebeccapurple;
+        position: relative;
+    
+        // &__img{
+        //     display: none;
+        // }
+        // justify-content: space-between;
+        &__list{
+            top: 30px;
+            left: 0;
+            position: absolute;
+            display:none;
+            flex-direction: column;
+            background-color: black;
+        }
+        .toogle{
+            // color: rgba(252, 183, 43, 1);
+            // background: rgba(252, 183, 43, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 30px;
+            &::after{
+                width: 100%;
+                content: "";
+                height: 5px;
+                background-color:  rgba(252, 183, 43, 1);;
+            }
+            span{
+            // color: rgba(252, 183, 43, 1);
+            // background: rgba(252, 183, 43, 1);
+
+                width: 100%;
+                height: 5px;
+                background-color:  rgba(252, 183, 43, 1);;
+            }
+            &::before{
+                // background: rgba(252, 183, 43, 1);
+                // color: rgba(252, 183, 43, 1);
+
+                width: 100%;
+                content: "";
+                height: 5px;
+                background-color:  rgba(252, 183, 43, 1);;
+            }
+        }
+        .toogle:active ~ .header__list{
+            display: flex;
+        }
+        &__btn{
+            display: none;
+        }
+
+    }
+}
